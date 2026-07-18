@@ -398,23 +398,38 @@ function setupMobileMenu() {
 function setupHeaderEffects() {
   const header = qs(".site-header");
   const navLinks = qsa(".main-nav a");
-  const sections = navLinks.map((link) => qs(link.getAttribute("href"))).filter(Boolean);
+  const sections = navLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
 
   const updateHeader = () => {
     header.classList.toggle("scrolled", window.scrollY > 30);
 
-    const current = sections.find((section) => {
-      const rect = section.getBoundingClientRect();
-      return rect.top <= 130 && rect.bottom >= 130;
-    });
+    // امسح التحديد أولًا حتى لا تظهر أكثر من وصلة نشطة في نفس الوقت.
+    navLinks.forEach((link) => link.classList.remove("active"));
 
-    navLinks.forEach((link) => {
-      link.classList.toggle("active", current && link.getAttribute("href") === `#${current.id}`);
-    });
+    const marker = header.offsetHeight + 24;
+    let currentSection = null;
+
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= marker && rect.bottom > marker) {
+        currentSection = section;
+        break;
+      }
+    }
+
+    if (currentSection) {
+      const currentLink = navLinks.find(
+        (link) => link.getAttribute("href") === `#${currentSection.id}`
+      );
+      currentLink?.classList.add("active");
+    }
   };
 
   updateHeader();
   window.addEventListener("scroll", updateHeader, { passive: true });
+  window.addEventListener("resize", updateHeader);
 }
 
 let revealObserver;

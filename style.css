@@ -1693,3 +1693,8 @@ button, input, textarea, select {
     transform: none;
   }
 }
+
+/* Navigation active-state fix: only the link carrying .active is underlined. */
+.main-nav a:not(.active):not(:hover)::after {
+  width: 0 !important;
+}
