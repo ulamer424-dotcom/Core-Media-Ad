@@ -9,16 +9,17 @@
 
 const SITE_CONFIG = {
   companyName: "Core Media Ad",
-  phoneDisplay: "+20 100 000 0000",
-  phoneLink: "+201000000000",
-  whatsappNumber: "201000000000",
+  phoneDisplay: "01125643485",
+  phoneLink: "+201125643485",
+  whatsappNumber: "201125643485",
   whatsappMessage: "مرحبًا Core Media Ad، أريد الاستفسار عن خدمات التسويق وإدارة السوشيال ميديا.",
   socialLinks: [
-    { name: "Facebook", label: "FB", url: "#" },
-    { name: "Instagram", label: "IG", url: "#" },
-    { name: "TikTok", label: "TT", url: "#" },
-    { name: "YouTube", label: "YT", url: "#" },
-    { name: "LinkedIn", label: "IN", url: "#" }
+    { name: "Facebook", icon: "fa-brands fa-facebook-f", url: "#" },
+    { name: "Instagram", icon: "fa-brands fa-instagram", url: "#" },
+    { name: "TikTok", icon: "fa-brands fa-tiktok", url: "#" },
+    { name: "YouTube", icon: "fa-brands fa-youtube", url: "#" },
+    { name: "LinkedIn", icon: "fa-brands fa-linkedin-in", url: "#" },
+    { name: "WhatsApp", icon: "fa-brands fa-whatsapp", url: "https://wa.me/201125643485" }
   ]
 };
 
@@ -346,7 +347,9 @@ function renderTestimonials() {
 
 function renderSocialLinks() {
   const socialHTML = SITE_CONFIG.socialLinks.map((link) => `
-    <a href="${link.url}" target="_blank" rel="noopener" aria-label="${link.name}">${link.label}</a>
+    <a href="${link.url}" target="_blank" rel="noopener" aria-label="${link.name}" title="${link.name}">
+      <i class="${link.icon}" aria-hidden="true"></i>
+    </a>
   `).join("");
 
   qs("#socialLinks").innerHTML = socialHTML;

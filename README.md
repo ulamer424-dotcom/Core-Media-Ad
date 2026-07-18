@@ -22,3 +22,7 @@ Cloudflare Pages سيعيد نشر الموقع تلقائيًا.
 - Framework preset: None
 - Build command: اتركه فارغًا
 - Build output directory: `/`
+
+
+## Contact update
+WhatsApp and phone number are configured as 01125643485 (international: +201125643485). Social icons use Font Awesome; replace # URLs in script.js with the real profile links.

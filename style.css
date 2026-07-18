@@ -384,6 +384,23 @@ button, input, textarea, select {
 .portfolio-card,
 .feature-card,
 .testimonial-card,
+
+.social-links a i,
+.footer-social a i {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.social-links a[aria-label="WhatsApp"],
+.footer-social a[aria-label="WhatsApp"] {
+  background: #25d366;
+  color: #fff;
+}
+
+.whatsapp-float i {
+  font-size: 1.75rem;
+}
+
 .contact-form {
   border: 1px solid rgba(255, 255, 255, 0.72);
   background: rgba(255, 255, 255, 0.78);
@@ -1289,6 +1306,23 @@ button, input, textarea, select {
   color: #fff;
 }
 
+
+.social-links a i,
+.footer-social a i {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.social-links a[aria-label="WhatsApp"],
+.footer-social a[aria-label="WhatsApp"] {
+  background: #25d366;
+  color: #fff;
+}
+
+.whatsapp-float i {
+  font-size: 1.75rem;
+}
+
 .contact-form {
   display: grid;
   gap: 15px;
@@ -1601,7 +1635,24 @@ button, input, textarea, select {
   }
 
   .about-text,
-  .contact-form {
+  
+.social-links a i,
+.footer-social a i {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.social-links a[aria-label="WhatsApp"],
+.footer-social a[aria-label="WhatsApp"] {
+  background: #25d366;
+  color: #fff;
+}
+
+.whatsapp-float i {
+  font-size: 1.75rem;
+}
+
+.contact-form {
     padding: 22px;
   }
 
