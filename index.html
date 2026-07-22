@@ -1,239 +1,297 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Core Media Ad - حلول تسويق رقمي وإدارة سوشيال ميديا باحترافية: محتوى، مونتاج، حملات، وتقارير أداء." />
-  <title>Core Media Ad | Digital Marketing & Social Media Solutions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="نظام CoreMedia Ad لإدارة ومتابعة الاشتراكات الشهرية والسنوية.">
+  <meta name="theme-color" content="#07184d">
+  <title>CoreMedia Ad | إدارة الاشتراكات</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page-bg" aria-hidden="true"></div>
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
 
-  <header class="site-header" id="top">
-    <div class="container nav-wrapper">
-      <a class="brand" href="#home" aria-label="Core Media Ad Home">
-        <img src="assets/logo.png" alt="Core Media Ad Logo" />
-      </a>
-
-      <nav class="main-nav" id="primaryNav" aria-label="القائمة الرئيسية">
-        <a href="#about">من نحن</a>
-        <a href="#services">الخدمات</a>
-        <a href="#packages">الباقات</a>
-        <a href="#portfolio">الأعمال</a>
-        <a href="#why-us">لماذا نحن</a>
-        <a href="#contact">تواصل</a>
-      </nav>
-
-      <a class="btn btn-small btn-primary nav-cta" href="#contact">احجز استشارة</a>
-
-      <button class="menu-toggle" id="menuToggle" type="button" aria-label="فتح القائمة" aria-controls="primaryNav" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero section" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content reveal">
-          <span class="eyebrow">Core Media Ad</span>
-          <h1>محتوى وسوشيال ميديا يخلّوا البراند يظهر بوضوح</h1>
-          <p class="hero-lead">
-            بنساعدك بخطة محتوى، تصميمات، فيديوهات مونتاج، متابعة للحسابات، وتقارير أداء واضحة علشان تعرف كل شهر إيه اللي اتحسن.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">احجز استشارة واتساب</a>
-            <a class="btn btn-outline" href="#packages">شاهد الباقات</a>
-          </div>
-          <div class="hero-stats" aria-label="إحصائيات سريعة">
-            <div><strong>3</strong><span>باقات واضحة</span></div>
-            <div><strong>9:16</strong><span>ريلز احترافية</span></div>
-            <div><strong>شهري</strong><span>تقرير أداء</span></div>
-          </div>
+  <section id="loginScreen" class="login-screen" aria-labelledby="loginTitle">
+    <div class="login-decoration login-decoration-one"></div>
+    <div class="login-decoration login-decoration-two"></div>
+    <div class="login-layout">
+      <div class="login-visual">
+        <div class="login-brand-badge">
+          <img src="assets/logo.png" alt="شعار CoreMedia Ad">
         </div>
+        <span class="login-eyebrow">COREMEDIA AD • LOGIN V2</span>
+        <h1>إدارة الاشتراكات<br><span>بوضوح وأمان</span></h1>
+        <p>تابع الاشتراكات والتجديدات والمصروفات والتنبيهات من لوحة تحكم واحدة منظمة ومتجاوبة.</p>
+        <div class="login-features">
+          <div><i class="fa-solid fa-chart-line"></i><span>إحصائيات وتقارير فورية</span></div>
+          <div><i class="fa-solid fa-bell"></i><span>تنبيهات قبل موعد التجديد</span></div>
+          <div><i class="fa-brands fa-whatsapp"></i><span>رسائل واتساب جاهزة</span></div>
+        </div>
+      </div>
 
-        <div class="hero-visual reveal" aria-label="واجهة تسويقية توضيحية">
-          <div class="glass-card dashboard-card">
-            <div class="dashboard-top">
-              <div>
-                <span>Campaign Performance</span>
-                <strong>+68%</strong>
-              </div>
-              <div class="pulse-dot"></div>
-            </div>
-            <div class="chart-bars" aria-hidden="true">
-              <span style="height: 42%"></span>
-              <span style="height: 65%"></span>
-              <span style="height: 52%"></span>
-              <span style="height: 78%"></span>
-              <span style="height: 88%"></span>
-              <span style="height: 72%"></span>
-            </div>
-            <div class="metric-row">
-              <div><b>Reach</b><span>120K</span></div>
-              <div><b>Engagement</b><span>8.4%</span></div>
+      <div class="login-card-wrap">
+        <form id="loginForm" class="login-card" novalidate>
+          <div class="login-card-header">
+            <div class="login-icon"><i class="fa-solid fa-user-shield"></i></div>
+            <div>
+              <h2 id="loginTitle">تسجيل الدخول</h2>
+              <p>أدخل بيانات الحساب للوصول إلى لوحة التحكم.</p>
             </div>
           </div>
 
-          <div class="floating-card reel-card">
-            <span class="play-icon">▶</span>
-            <b>Reels Editing</b>
-            <small>Vertical 9:16</small>
+          <label class="login-field">
+            <span>اسم المستخدم</span>
+            <div class="login-input-wrap">
+              <i class="fa-regular fa-user"></i>
+              <input id="loginUsername" type="text" autocomplete="username" required placeholder="أدخل اسم المستخدم">
+            </div>
+          </label>
+
+          <label class="login-field">
+            <span>كلمة المرور</span>
+            <div class="login-input-wrap">
+              <i class="fa-solid fa-key"></i>
+              <input id="loginPassword" type="password" autocomplete="current-password" required placeholder="أدخل كلمة المرور">
+              <button id="toggleLoginPassword" type="button" class="login-password-toggle" aria-label="إظهار أو إخفاء كلمة المرور"><i class="fa-regular fa-eye"></i></button>
+            </div>
+          </label>
+
+          <div class="login-options login-required-note">
+            <span><i class="fa-solid fa-lock"></i> تسجيل الدخول مطلوب عند كل فتح للموقع</span>
+            <small>حساب إداري محلي</small>
           </div>
 
-          <div class="floating-card report-card">
-            <b>Weekly Report</b>
-            <small>نتائج واضحة ومنظمة</small>
-          </div>
-        </div>
-      </div>
-    </section>
+          <p id="loginError" class="login-error" aria-live="polite"></p>
+          <button id="loginBtn" type="submit" class="btn btn-primary btn-block login-submit"><i class="fa-solid fa-right-to-bracket"></i> دخول إلى لوحة التحكم</button>
 
-    <section class="section about" id="about">
-      <div class="container two-col">
-        <div class="section-heading reveal">
-          <span class="eyebrow">من نحن</span>
-          <h2>شريكك لبناء حضور رقمي أقوى</h2>
-        </div>
-        <div class="about-text reveal">
-          <p>
-            <strong>Core Media Ad</strong> هي شركة متخصصة في حلول التسويق الرقمي وإدارة السوشيال ميديا، نساعد الشركات والبراندات على الوصول لجمهورها بطريقة فعالة من خلال محتوى جذاب، فيديوهات احترافية، خطط تسويقية منظمة، وتقارير أداء تساعد في تطوير النتائج.
-          </p>
-          <div class="about-points">
-            <span>استراتيجية محتوى</span>
-            <span>مونتاج احترافي</span>
-            <span>تحليل نتائج</span>
-          </div>
-        </div>
-      </div>
-    </section>
+          
 
-    <section class="section services" id="services">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <span class="eyebrow">خدماتنا</span>
-          <h2>كل ما يحتاجه البراند للنمو على السوشيال ميديا</h2>
-          <p>خدمات متكاملة من التخطيط وكتابة المحتوى إلى المونتاج والتقارير.</p>
-        </div>
-        <div class="cards-grid services-grid" id="servicesGrid"></div>
-      </div>
-    </section>
-
-    <section class="section packages" id="packages">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <span class="eyebrow">الباقات والأسعار</span>
-          <h2>باقات واضحة بسعر واحد وخدمات محددة</h2>
-          <p>كل باقة لها سعر إجمالي، وبداخلها عدد الفيديوهات والبوستات والخدمات المضافة بدون أي حسابات جانبية.</p>
-        </div>
-        <div class="pricing-grid" id="packagesGrid"></div>
-      </div>
-    </section>
-
-    <section class="section portfolio" id="portfolio">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <span class="eyebrow">Portfolio</span>
-          <h2>أشكال من الشغل اللي بننفذه</h2>
-          <p>نماذج توضح شكل الريلز، تصميمات الحملات، كتابة المحتوى، التقارير، وخطط الإعلانات.</p>
-        </div>
-        <div class="portfolio-tabs reveal" id="portfolioTabs" aria-label="فلترة الأعمال"></div>
-        <div class="portfolio-grid" id="portfolioGrid"></div>
-      </div>
-    </section>
-
-    <section class="section why-us" id="why-us">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <span class="eyebrow">لماذا تختار Core Media Ad؟</span>
-          <h2>تنفيذ منظم، شكل احترافي، ونتائج قابلة للقياس</h2>
-        </div>
-        <div class="features-grid" id="featuresGrid"></div>
-      </div>
-    </section>
-
-    <section class="section testimonials" id="testimonials">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <span class="eyebrow">طريقة العمل</span>
-          <h2>خطوات واضحة من أول الفكرة لحد التقرير</h2>
-        </div>
-        <div class="testimonials-grid" id="testimonialsGrid"></div>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-content reveal">
-          <span class="eyebrow">تواصل معنا</span>
-          <h2>جاهز نختار الباقة الأنسب لنشاطك؟</h2>
-          <p>اترك بياناتك أو تواصل معنا مباشرة عبر واتساب، وسنساعدك في اختيار الخدمة أو الباقة المناسبة.</p>
-          <div class="contact-actions">
-            <a class="btn btn-primary whatsapp-link" href="#" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> واتساب مباشر</a>
-            <a class="btn btn-outline" href="tel:+201000000000" id="phoneLink">اتصل الآن</a>
-          </div>
-          <div class="social-links" id="socialLinks"></div>
-        </div>
-
-        <form class="contact-form reveal" id="contactForm">
-          <label>
-            الاسم
-            <input type="text" name="name" placeholder="اكتب اسمك" required />
-          </label>
-          <label>
-            رقم الهاتف
-            <input type="tel" name="phone" placeholder="01000000000" required />
-          </label>
-          <label>
-            الخدمة المطلوبة
-            <select name="service" required>
-              <option value="">اختر الخدمة</option>
-              <option>إدارة السوشيال ميديا</option>
-              <option>التسويق الإلكتروني</option>
-              <option>كتابة المحتوى التسويقي</option>
-              <option>خدمات المونتاج</option>
-              <option>التقارير الأسبوعية والشهرية</option>
-            </select>
-          </label>
-          <label>
-            الرسالة
-            <textarea name="message" rows="5" placeholder="اكتب تفاصيل بسيطة عن نشاطك"></textarea>
-          </label>
-          <button class="btn btn-primary" type="submit">إرسال عبر واتساب</button>
+          <p class="login-security-note"><i class="fa-solid fa-shield-halved"></i> هذه حماية محلية لموقع ثابت، وليست بديلًا عن تسجيل دخول بخادم وقاعدة بيانات.</p>
         </form>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/logo.png" alt="Core Media Ad Logo" />
-        <p>حلول تسويق رقمي وإدارة سوشيال ميديا تساعد البراندات على الظهور والنمو بشكل احترافي.</p>
-      </div>
-      <div>
-        <h3>روابط سريعة</h3>
-        <a href="#about">من نحن</a>
-        <a href="#services">الخدمات</a>
-        <a href="#packages">الباقات</a>
-        <a href="#portfolio">الأعمال</a>
-      </div>
-      <div>
-        <h3>تابعنا</h3>
-        <div class="footer-social" id="footerSocialLinks"></div>
-      </div>
     </div>
-    <div class="copyright">© 2026 Core Media Ad. All rights reserved.</div>
-  </footer>
+  </section>
 
-  <a class="whatsapp-float whatsapp-link" href="#" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+  <div id="lockScreen" class="lock-screen hidden" aria-modal="true" role="dialog">
+    <div class="lock-card">
+      <img src="assets/logo.png" alt="CoreMedia Ad">
+      <h2>النظام مقفل</h2>
+      <p>أدخل رمز PIN للمتابعة.</p>
+      <input id="unlockPin" type="password" inputmode="numeric" maxlength="8" placeholder="رمز PIN">
+      <p id="unlockError" class="field-error"></p>
+      <button id="unlockBtn" class="btn btn-primary btn-block"><i class="fa-solid fa-lock-open"></i> فتح النظام</button>
+    </div>
+  </div>
 
+  <div id="appShell" class="app-shell hidden">
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+    <aside id="sidebar" class="sidebar">
+      <div class="brand-block">
+        <img src="assets/logo.png" alt="شعار CoreMedia Ad" class="brand-logo">
+        <div><strong>CoreMedia Ad</strong><span>إدارة الاشتراكات</span></div>
+        <button id="closeSidebar" class="icon-btn mobile-only" aria-label="إغلاق القائمة"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <nav class="sidebar-nav" aria-label="التنقل الرئيسي">
+        <button class="nav-item active" data-view="dashboard"><i class="fa-solid fa-chart-pie"></i><span>لوحة التحكم</span></button>
+        <button class="nav-item" data-view="subscriptions" data-preset="all"><i class="fa-solid fa-layer-group"></i><span>جميع الاشتراكات</span></button>
+        <button class="nav-item" data-view="subscriptions" data-preset="active"><i class="fa-solid fa-circle-check"></i><span>الاشتراكات النشطة</span></button>
+        <button class="nav-item" data-view="subscriptions" data-preset="expiring"><i class="fa-solid fa-triangle-exclamation"></i><span>أوشكت على الانتهاء</span></button>
+        <button class="nav-item" data-view="subscriptions" data-preset="expired"><i class="fa-solid fa-circle-xmark"></i><span>الاشتراكات المنتهية</span></button>
+        <button class="nav-item" data-view="subscriptions" data-preset="monthly"><i class="fa-regular fa-calendar"></i><span>الاشتراكات الشهرية</span></button>
+        <button class="nav-item" data-view="subscriptions" data-preset="annual"><i class="fa-solid fa-calendar-days"></i><span>الاشتراكات السنوية</span></button>
+        <button class="nav-item" data-view="calendar"><i class="fa-solid fa-calendar-week"></i><span>التقويم</span></button>
+        <button class="nav-item" data-view="reports"><i class="fa-solid fa-chart-column"></i><span>التقارير</span></button>
+        <button class="nav-item" data-view="settings"><i class="fa-solid fa-gear"></i><span>الإعدادات</span></button>
+        <button class="nav-item" data-view="backup"><i class="fa-solid fa-box-archive"></i><span>النسخ الاحتياطي</span></button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="security-note"><i class="fa-solid fa-shield-halved"></i><span>لا تستخدم كلمات مرور حقيقية في النسخة المحلية.</span></div>
+        <button id="lockNowBtn" class="btn btn-ghost btn-block"><i class="fa-solid fa-lock"></i> قفل النظام</button>
+        <button id="logoutBtn" class="btn btn-logout btn-block"><i class="fa-solid fa-arrow-right-from-bracket"></i> تسجيل الخروج</button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-start">
+          <button id="openSidebar" class="icon-btn mobile-only" aria-label="فتح القائمة"><i class="fa-solid fa-bars"></i></button>
+          <div>
+            <h1 id="pageTitle">لوحة التحكم</h1>
+            <div class="live-time"><span id="currentDate"></span><span class="dot"></span><span id="currentTime"></span></div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div class="user-chip" title="المستخدم الحالي"><i class="fa-solid fa-user-shield"></i><span id="currentLoginUser">admin</span></div>
+          <button id="notificationBtn" class="icon-btn notification-button" title="الإشعارات"><i class="fa-regular fa-bell"></i><span id="notificationCount" class="notification-count hidden">0</span></button>
+          <button id="themeToggle" class="icon-btn" title="تغيير الوضع"><i class="fa-solid fa-moon"></i></button>
+          <button id="addSubscriptionBtn" class="btn btn-primary"><i class="fa-solid fa-plus"></i><span>إضافة اشتراك</span></button>
+        </div>
+      </header>
+
+      <section id="notificationPanel" class="notification-panel hidden">
+        <div class="section-heading compact"><div><h2>مركز التنبيهات</h2><p>التنبيهات الحالية والاشتراكات التي تحتاج مراجعة.</p></div><button id="closeNotificationPanel" class="icon-btn"><i class="fa-solid fa-xmark"></i></button></div>
+        <div id="notificationList" class="notification-list"></div>
+      </section>
+
+      <div class="content-wrap">
+        <section id="view-dashboard" class="view-section active">
+          <div id="dashboardAlertBanner" class="dashboard-alert-banner hidden"></div>
+          <div id="statsGrid" class="stats-grid">
+            <article class="stat-card"><div class="stat-icon gradient-a"><i class="fa-solid fa-layer-group"></i></div><div><span>إجمالي الاشتراكات</span><strong id="statTotal">0</strong></div></article>
+            <article class="stat-card"><div class="stat-icon gradient-b"><i class="fa-solid fa-circle-check"></i></div><div><span>الاشتراكات النشطة</span><strong id="statActive">0</strong></div></article>
+            <article class="stat-card"><div class="stat-icon gradient-c"><i class="fa-solid fa-hourglass-half"></i></div><div><span>تنتهي قريبًا</span><strong id="statExpiring">0</strong></div></article>
+            <article class="stat-card"><div class="stat-icon gradient-d"><i class="fa-solid fa-circle-xmark"></i></div><div><span>الاشتراكات المنتهية</span><strong id="statExpired">0</strong></div></article>
+            <article class="stat-card wide-number"><div class="stat-icon gradient-e"><i class="fa-solid fa-coins"></i></div><div><span>مصروفات شهرية</span><strong id="statMonthlyCost">0</strong></div></article>
+            <article class="stat-card wide-number"><div class="stat-icon gradient-f"><i class="fa-solid fa-money-bill-trend-up"></i></div><div><span>مصروفات سنوية</span><strong id="statAnnualCost">0</strong></div></article>
+            <article class="stat-card"><div class="stat-icon gradient-g"><i class="fa-solid fa-rotate"></i></div><div><span>تجديدات هذا الشهر</span><strong id="statRenewThisMonth">0</strong></div></article>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="panel span-2">
+              <div class="section-heading"><div><h2>الاشتراكات القريبة من الانتهاء</h2><p>مرتبة من الأقرب إلى الأبعد خلال 10 أيام.</p></div><button class="btn btn-soft" data-go-view="subscriptions" data-preset="expiring">عرض الكل</button></div>
+              <div id="expiringList" class="expiring-list"></div>
+            </section>
+            <section class="panel"><div class="section-heading"><div><h2>توزيع الحالات</h2><p>نظرة سريعة على حالة الاشتراكات.</p></div></div><div class="chart-holder"><canvas id="statusChart"></canvas></div></section>
+            <section class="panel span-2"><div class="section-heading"><div><h2>المصروفات حسب نوع الاشتراك</h2><p>مقارنة إجمالي القيم الشهرية والسنوية.</p></div></div><div class="chart-holder chart-wide"><canvas id="expenseChart"></canvas></div></section>
+            <section class="panel quick-actions-panel"><div class="section-heading"><div><h2>إجراءات سريعة</h2><p>وظائف تستخدمها باستمرار.</p></div></div><div class="quick-actions">
+              <button class="quick-action" id="quickAddBtn"><i class="fa-solid fa-plus"></i><span>إضافة اشتراك</span></button>
+              <button class="quick-action" data-go-view="calendar"><i class="fa-solid fa-calendar-week"></i><span>فتح التقويم</span></button>
+              <button class="quick-action" id="quickExportBtn"><i class="fa-solid fa-file-export"></i><span>تصدير JSON</span></button>
+              <button class="quick-action" data-go-view="backup"><i class="fa-solid fa-box-archive"></i><span>نسخة احتياطية</span></button>
+            </div></section>
+          </div>
+        </section>
+
+        <section id="view-subscriptions" class="view-section">
+          <section class="panel">
+            <div class="section-heading"><div><h2>إدارة الاشتراكات</h2><p id="subscriptionViewDescription">ابحث وصفِّ ورتّب جميع الاشتراكات المسجلة.</p></div><button id="clearDemoBtn" class="btn btn-danger-outline"><i class="fa-solid fa-flask-vial"></i> حذف البيانات التجريبية</button></div>
+            <div class="filters-toolbar">
+              <label class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="searchInput" type="search" placeholder="ابحث بالاسم أو البريد أو المسؤول أو الخدمة"></label>
+              <select id="statusFilter"><option value="all">كل الحالات</option><option value="active">نشط</option><option value="warning">تحذير</option><option value="urgent">عاجل</option><option value="expired">منتهي</option><option value="stopped">متوقف</option></select>
+              <select id="cycleFilter"><option value="all">كل الأنواع</option><option value="monthly">شهري</option><option value="annual">سنوي</option><option value="custom">مخصص</option></select>
+              <select id="currencyFilter"><option value="all">كل العملات</option><option value="EGP">جنيه مصري</option><option value="SAR">ريال سعودي</option><option value="USD">دولار</option></select>
+              <select id="paymentFilter"><option value="all">كل طرق الدفع</option></select>
+              <select id="sortFilter"><option value="endAsc">الأقرب انتهاءً</option><option value="endDesc">الأبعد انتهاءً</option><option value="priceDesc">الأعلى تكلفة</option><option value="priceAsc">الأقل تكلفة</option><option value="nameAsc">الاسم أ–ي</option></select>
+              <button id="resetFiltersBtn" class="btn btn-soft"><i class="fa-solid fa-filter-circle-xmark"></i> إلغاء الفلاتر</button>
+            </div>
+            <div class="table-meta"><span id="resultCount">0 اشتراك</span><div><button id="exportCsvBtn" class="btn btn-ghost btn-small"><i class="fa-solid fa-file-csv"></i> CSV</button><button id="printBtn" class="btn btn-ghost btn-small"><i class="fa-solid fa-print"></i> طباعة</button></div></div>
+            <div class="table-wrap"><table><thead><tr><th>الخدمة</th><th>البريد الإلكتروني</th><th>النوع</th><th>القيمة</th><th>تاريخ البداية</th><th>تاريخ الانتهاء</th><th>الوقت المتبقي</th><th>الحالة</th><th>المسؤول</th><th>الإجراءات</th></tr></thead><tbody id="subscriptionsTableBody"></tbody></table></div>
+            <div id="tableEmptyState" class="empty-state hidden"><i class="fa-solid fa-folder-open"></i><h3>لا توجد اشتراكات مطابقة</h3><p>غيّر الفلاتر أو أضف اشتراكًا جديدًا.</p></div>
+          </section>
+        </section>
+
+        <section id="view-calendar" class="view-section">
+          <section class="panel">
+            <div class="section-heading"><div><h2>تقويم الاشتراكات</h2><p>مواعيد الانتهاء والتجديد والمراجعة في عرض شهري.</p></div><div class="calendar-controls"><button id="calendarPrev" class="icon-btn"><i class="fa-solid fa-chevron-right"></i></button><strong id="calendarTitle"></strong><button id="calendarNext" class="icon-btn"><i class="fa-solid fa-chevron-left"></i></button><button id="calendarToday" class="btn btn-soft btn-small">اليوم</button></div></div>
+            <div class="calendar-weekdays"><span>الأحد</span><span>الاثنين</span><span>الثلاثاء</span><span>الأربعاء</span><span>الخميس</span><span>الجمعة</span><span>السبت</span></div>
+            <div id="calendarGrid" class="calendar-grid"></div>
+          </section>
+          <section class="panel"><div class="section-heading compact"><div><h2 id="calendarDayTitle">اختر يومًا من التقويم</h2><p>ستظهر الاشتراكات المرتبطة بهذا التاريخ هنا.</p></div></div><div id="calendarDayEvents" class="calendar-day-events"></div></section>
+        </section>
+
+        <section id="view-reports" class="view-section">
+          <div class="report-actions"><button id="reportCsvBtn" class="btn btn-soft"><i class="fa-solid fa-file-csv"></i> تصدير CSV</button><button id="reportJsonBtn" class="btn btn-soft"><i class="fa-solid fa-file-code"></i> تصدير JSON</button><button id="reportPrintBtn" class="btn btn-primary"><i class="fa-solid fa-print"></i> نسخة قابلة للطباعة</button></div>
+          <div class="stats-grid report-stats">
+            <article class="stat-card"><div class="stat-icon gradient-b"><i class="fa-solid fa-check"></i></div><div><span>مدفوع هذا الشهر</span><strong id="reportPaid">0</strong></div></article>
+            <article class="stat-card"><div class="stat-icon gradient-c"><i class="fa-solid fa-rotate"></i></div><div><span>تحتاج تجديدًا</span><strong id="reportNeedsRenewal">0</strong></div></article>
+            <article class="stat-card wide-number"><div class="stat-icon gradient-e"><i class="fa-solid fa-coins"></i></div><div><span>إجمالي المصروفات</span><strong id="reportExpenses">0</strong></div></article>
+            <article class="stat-card"><div class="stat-icon gradient-d"><i class="fa-solid fa-ban"></i></div><div><span>منتهية</span><strong id="reportExpired">0</strong></div></article>
+            <article class="stat-card"><div class="stat-icon gradient-a"><i class="fa-solid fa-star"></i></div><div><span>جديدة هذا الشهر</span><strong id="reportNew">0</strong></div></article>
+          </div>
+          <div class="dashboard-grid"><section class="panel span-2"><div class="section-heading"><div><h2>أكثر الخدمات تكلفة</h2><p>مرتبة حسب القيمة المسجلة.</p></div></div><div class="chart-holder chart-wide"><canvas id="topServicesChart"></canvas></div></section><section class="panel"><div class="section-heading"><div><h2>مؤشرات التجديد</h2><p>عمليات التجديد والانتهاء.</p></div></div><div id="renewalIndicators" class="indicator-list"></div></section></div>
+          <section class="panel"><div class="section-heading"><div><h2>التقرير الشهري</h2><p id="reportMonthLabel"></p></div></div><div class="table-wrap"><table><thead><tr><th>الاشتراك</th><th>الحالة</th><th>القيمة</th><th>تاريخ الانتهاء</th><th>المسؤول</th></tr></thead><tbody id="reportTableBody"></tbody></table></div></section>
+        </section>
+
+        <section id="view-settings" class="view-section">
+          <div class="settings-grid">
+            <section class="panel"><div class="section-heading"><div><h2>التنبيهات والواتساب</h2><p>تحكم في التنبيهات ورقم استقبال الرسائل.</p></div></div><div class="form-stack">
+              <label>رقم واتساب الدولي داخل رابط wa.me<input id="settingsWhatsapp" type="text" inputmode="numeric" placeholder="201125643485"><small>بدون علامة + وبدون الصفر الأول.</small></label>
+              <label class="toggle-row"><span><strong>Browser Notifications</strong><small>تحتاج إلى موافقة المتصفح وموقع آمن HTTPS.</small></span><input id="settingsBrowserNotifications" type="checkbox"><i></i></label>
+              <label class="toggle-row"><span><strong>صوت التنبيه</strong><small>تشغيل نغمة قصيرة عند ظهور تنبيه جديد.</small></span><input id="settingsSound" type="checkbox"><i></i></label>
+              <button id="requestNotificationPermission" class="btn btn-soft"><i class="fa-regular fa-bell"></i> طلب إذن الإشعارات</button>
+            </div></section>
+            <section class="panel"><div class="section-heading"><div><h2>بيانات تسجيل الدخول</h2><p>غيّر اسم المستخدم أو كلمة المرور الخاصة بصفحة الدخول.</p></div></div><div class="form-stack">
+              <label>اسم المستخدم<input id="settingsLoginUsername" type="text" autocomplete="off" minlength="3" placeholder="admin"><small>ثلاثة أحرف على الأقل، ولا تتركه فارغًا.</small></label>
+              <label>كلمة مرور جديدة<input id="settingsLoginPassword" type="password" autocomplete="new-password" minlength="8" placeholder="اتركها فارغة للاحتفاظ بالحالية"><small>ثمانية أحرف على الأقل.</small></label>
+              <label>تأكيد كلمة المرور الجديدة<input id="settingsLoginPasswordConfirm" type="password" autocomplete="new-password" minlength="8" placeholder="أعد كتابة كلمة المرور"></label>
+              <div class="warning-box"><i class="fa-solid fa-shield-halved"></i><p>بعد تغيير البيانات، استخدمها في المرة القادمة عند تسجيل الدخول. يمكن الضغط على «تسجيل الخروج» لاختبارها فورًا.</p></div>
+            </div></section>
+            <section class="panel"><div class="section-heading"><div><h2>قفل النظام</h2><p>حماية محلية بسيطة لمنع الوصول العابر.</p></div></div><div class="form-stack">
+              <label class="toggle-row"><span><strong>تفعيل رمز PIN</strong><small>يطلب الرمز عند فتح الموقع أو قفله يدويًا.</small></span><input id="settingsPinEnabled" type="checkbox"><i></i></label>
+              <label>رمز PIN جديد<input id="settingsPin" type="password" inputmode="numeric" maxlength="8" placeholder="من 4 إلى 8 أرقام"></label>
+              <label>القفل التلقائي بعد عدم النشاط<select id="settingsAutoLock"><option value="0">غير مفعل</option><option value="5">5 دقائق</option><option value="10">10 دقائق</option><option value="15">15 دقيقة</option><option value="30">30 دقيقة</option></select></label>
+            </div></section>
+            <section class="panel"><div class="section-heading"><div><h2>المظهر والبيانات</h2><p>خيارات العرض والخصوصية عند الطباعة.</p></div></div><div class="form-stack">
+              <label>الوضع الافتراضي<select id="settingsTheme"><option value="light">فاتح</option><option value="dark">داكن</option></select></label>
+              <label class="toggle-row"><span><strong>إخفاء البيانات الحساسة عند الطباعة</strong><small>إخفاء البريد والحساب والبطاقة.</small></span><input id="settingsHideSensitivePrint" type="checkbox"><i></i></label>
+              <div class="warning-box"><i class="fa-solid fa-triangle-exclamation"></i><p>Local Storage ليس مناسبًا لحفظ كلمات مرور حقيقية في نظام إنتاجي. النسخة الآمنة تحتاج Backend وقاعدة بيانات وتشفير وصلاحيات مستخدمين.</p></div>
+            </div></section>
+          </div>
+          <div class="settings-save-bar"><button id="saveSettingsBtn" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> حفظ الإعدادات</button></div>
+        </section>
+
+        <section id="view-backup" class="view-section">
+          <div class="backup-grid">
+            <section class="panel backup-card"><i class="fa-solid fa-file-arrow-down"></i><h2>تصدير نسخة احتياطية</h2><p>تنزيل الاشتراكات والإعدادات وسجل التجديدات داخل ملف JSON.</p><button id="exportBackupBtn" class="btn btn-primary">تصدير نسخة احتياطية</button></section>
+            <section class="panel backup-card"><i class="fa-solid fa-file-arrow-up"></i><h2>استيراد نسخة احتياطية</h2><p>تحقق من الملف أولًا، ثم أكد الاستبدال قبل استعادة البيانات.</p><label class="btn btn-soft file-button">اختيار ملف JSON<input id="importBackupInput" type="file" accept=".json,application/json"></label></section>
+            <section class="panel backup-card"><i class="fa-solid fa-file-csv"></i><h2>تصدير البيانات</h2><p>احصل على CSV لفتحه في Excel أو نسخة JSON كاملة.</p><div class="button-row"><button id="backupCsvBtn" class="btn btn-soft">CSV</button><button id="backupJsonBtn" class="btn btn-soft">JSON</button></div></section>
+          </div>
+          <section class="panel"><div class="section-heading"><div><h2>سلة المحذوفات</h2><p>يمكن استعادة الاشتراكات المحذوفة أو حذفها نهائيًا.</p></div><button id="emptyTrashBtn" class="btn btn-danger-outline btn-small">إفراغ السلة</button></div><div id="trashList" class="trash-list"></div></section>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div id="subscriptionModal" class="modal-backdrop hidden">
+    <div class="modal modal-large" role="dialog" aria-modal="true" aria-labelledby="subscriptionModalTitle">
+      <div class="modal-header"><div><h2 id="subscriptionModalTitle">إضافة اشتراك جديد</h2><p>أدخل بيانات الاشتراك بدقة، والحقول المميزة مطلوبة.</p></div><button class="icon-btn modal-close" data-close-modal="subscriptionModal"><i class="fa-solid fa-xmark"></i></button></div>
+      <form id="subscriptionForm" novalidate>
+        <input id="subscriptionId" type="hidden">
+        <div class="form-grid">
+          <label>اسم الاشتراك <em>*</em><input id="subName" required maxlength="80" placeholder="مثال: ChatGPT Plus"><small class="field-error"></small></label>
+          <label>اسم الخدمة أو المنصة <em>*</em><input id="subPlatform" required maxlength="80" placeholder="OpenAI"><small class="field-error"></small></label>
+          <label>التصنيف<select id="subCategory"><option>ذكاء اصطناعي</option><option>تصميم</option><option>مونتاج</option><option>تسويق</option><option>استضافة ودومينات</option><option>إدارة أعمال</option><option>أخرى</option></select></label>
+          <label>رابط شعار الخدمة<input id="subLogoUrl" type="url" placeholder="https://example.com/logo.png"></label>
+          <label>البريد الإلكتروني المستخدم <em>*</em><input id="subEmail" type="email" required placeholder="example@email.com"><small class="field-error"></small></label>
+          <label>اسم المستخدم<input id="subUsername" maxlength="100"></label>
+          <label>كلمة المرور<div class="password-input"><input id="subPassword" type="password" autocomplete="new-password"><button id="toggleSubPassword" type="button" class="icon-btn"><i class="fa-regular fa-eye"></i></button></div></label>
+          <label>نوع الاشتراك <em>*</em><select id="subCycle" required><option value="monthly">شهري</option><option value="annual">سنوي</option><option value="custom">مخصص</option></select></label>
+          <label>تاريخ البداية <em>*</em><input id="subStartDate" type="date" required><small class="field-error"></small></label>
+          <label>تاريخ الانتهاء <em>*</em><input id="subEndDate" type="date" required><small class="field-error"></small></label>
+          <label>قيمة الاشتراك <em>*</em><input id="subPrice" type="number" min="0" step="0.01" required><small class="field-error"></small></label>
+          <label>العملة<select id="subCurrency"><option value="EGP">جنيه مصري</option><option value="SAR">ريال سعودي</option><option value="USD">دولار</option></select></label>
+          <label>طريقة الدفع <em>*</em><input id="subPaymentMethod" required placeholder="بطاقة بنكية / تحويل / PayPal"><small class="field-error"></small></label>
+          <label>آخر أربعة أرقام من البطاقة<input id="subCardLast4" inputmode="numeric" maxlength="4" pattern="\d{4}" placeholder="1234"></label>
+          <label>اسم المسؤول <em>*</em><input id="subOwner" required maxlength="80"><small class="field-error"></small></label>
+          <label>رقم هاتف المسؤول<input id="subPhone" type="tel" placeholder="+20..."></label>
+          <label class="span-2">رابط الموقع أو المنصة<input id="subWebsite" type="url" placeholder="https://..."></label>
+          <label class="span-2">ملاحظات إضافية<textarea id="subNotes" rows="3"></textarea></label>
+          <label class="toggle-row"><span><strong>تفعيل تنبيهات الانتهاء</strong><small>إظهار التنبيهات داخل الموقع.</small></span><input id="subAlertsEnabled" type="checkbox" checked><i></i></label>
+          <label>التنبيه قبل الانتهاء بعدد أيام<input id="subAlertDays" type="number" min="0" max="365" value="10"></label>
+          <label class="toggle-row"><span><strong>تنبيه دوري كل 10 أيام</strong><small>فحص تاريخ آخر تنبيه عند فتح الموقع.</small></span><input id="subPeriodicAlert" type="checkbox"><i></i></label>
+          <label>الحالة اليدوية<select id="subManualStatus"><option value="active">تلقائية / نشطة</option><option value="stopped">متوقف</option></select></label>
+        </div>
+        <div class="modal-actions"><button type="button" id="resetSubscriptionForm" class="btn btn-ghost">إعادة تعيين</button><div><button type="button" class="btn btn-soft modal-close" data-close-modal="subscriptionModal">إلغاء</button><button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> حفظ الاشتراك</button></div></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="detailsModal" class="modal-backdrop hidden"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="detailsModalTitle"><div class="modal-header"><div><h2 id="detailsModalTitle">تفاصيل الاشتراك</h2><p>بيانات الحساب والسجل والتنبيهات.</p></div><button class="icon-btn modal-close" data-close-modal="detailsModal"><i class="fa-solid fa-xmark"></i></button></div><div id="detailsContent"></div></div></div>
+
+  <div id="renewModal" class="modal-backdrop hidden"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="renewModalTitle"><div class="modal-header"><div><h2 id="renewModalTitle">تجديد الاشتراك</h2><p id="renewSubscriptionName"></p></div><button class="icon-btn modal-close" data-close-modal="renewModal"><i class="fa-solid fa-xmark"></i></button></div><form id="renewForm" novalidate><input id="renewSubscriptionId" type="hidden"><div class="form-grid">
+    <label>تاريخ التجديد <em>*</em><input id="renewDate" type="date" required></label>
+    <label>تاريخ الانتهاء الجديد <em>*</em><input id="renewEndDate" type="date" required></label>
+    <label>قيمة التجديد <em>*</em><input id="renewPrice" type="number" min="0" step="0.01" required></label>
+    <label>طريقة الدفع <em>*</em><input id="renewPaymentMethod" required></label>
+    <label class="span-2">ملاحظات<textarea id="renewNotes" rows="3"></textarea></label>
+    <label class="toggle-row span-2"><span><strong>تم الدفع</strong><small>إضافة العملية إلى التقرير المالي.</small></span><input id="renewPaid" type="checkbox" checked><i></i></label>
+  </div><div class="modal-actions"><span></span><div><button type="button" class="btn btn-soft modal-close" data-close-modal="renewModal">إلغاء</button><button type="submit" class="btn btn-primary"><i class="fa-solid fa-rotate"></i> حفظ التجديد</button></div></div></form></div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
